@@ -33,7 +33,7 @@ class _ChewieDemoState extends State<ChewieDemo> {
   void initState() {
     super.initState();
     _videoPlayerController1 = VideoPlayerController.network(
-        'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4');
+        'https://r8---sn-n3cgv5qc5oq-bh2ey.googlevideo.com/videoplayback?expire=1581900025&ei=mYxJXo-vFcWAqQGM-JDgCA&ip=58.123.108.119&id=o-AG37dSR15LbaVG1Nr22Ux9n38K8CSJNmcRVOtR3ZDO7A&itag=18&source=youtube&requiressl=yes&mm=31%2C26&mn=sn-n3cgv5qc5oq-bh2ey%2Csn-i3b7kn7d&ms=au%2Conr&mv=m&mvi=7&pl=17&initcwndbps=1953750&vprv=1&mime=video%2Fmp4&gir=yes&clen=6237203&ratebypass=yes&dur=84.172&lmt=1581732821210524&mt=1581878319&fvip=3&fexp=23842630&c=WEB&txp=5531432&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=ALgxI2wwRgIhAO4LtNxOC49kGvBVuGx7LRhVP-3DhpR9eMASUppyMjQVAiEA_4mhSj0iHSlzs1kD4Euzab6kIgIPVbDCmz3IqU1cLEc%3D&lsparams=mm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AHylml4wRQIhALYpyUjGBBG8C5LVGrDlD7KLhF_kn80cOMxbhMz-S1GnAiBVCYjRbRushb7US2CNHWRjpKWjh5I0-zh8iBbpkIunUw%3D%3D');
     _videoPlayerController2 = VideoPlayerController.network(
         'https://www.sample-videos.com/video123/mp4/480/big_buck_bunny_480p_20mb.mp4');
     _chewieController = ChewieController(
