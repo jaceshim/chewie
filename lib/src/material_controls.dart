@@ -371,7 +371,7 @@ class _MaterialControlsState extends State<MaterialControls> {
   Widget _buildProgressBar() {
     return Expanded(
       child: Padding(
-        padding: EdgeInsets.only(right: 8.0),
+        padding: EdgeInsets.only(right: 10.0),
         child: MaterialVideoProgressBar(
           controller,
           onDragStart: () {
