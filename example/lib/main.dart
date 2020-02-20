@@ -52,6 +52,9 @@ class _ChewieDemoState extends State<ChewieDemo> {
       //   color: Colors.grey,
       // ),
       // autoInitialize: true,
+      playIcon: Container(
+        child: Image.asset("assets/play_icon.png", width: 42, height: 42,),
+      )
     );
   }
 

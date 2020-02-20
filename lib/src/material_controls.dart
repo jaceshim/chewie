@@ -26,7 +26,7 @@ class _MaterialControlsState extends State<MaterialControls> {
   bool _dragging = false;
   bool _displayTapped = false;
 
-  final barHeight = 42.0;
+  final barHeight = 50.0;
   final marginSize = 5.0;
 
   VideoPlayerController controller;
@@ -154,9 +154,21 @@ class _MaterialControlsState extends State<MaterialControls> {
   }
 
   Expanded _buildHitArea() {
-    return Expanded(
-      child: Container(),
-    );
+
+    Widget playIconWidget = Container(
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).dialogBackgroundColor,
+                    borderRadius: BorderRadius.circular(48.0),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(12.0),
+                    child: this.chewieController.playIcon != null ? this.chewieController.playIcon : Icon(Icons.play_arrow, size: 32.0),
+                  ),
+                );
+    if (this.chewieController.playIcon != null) {
+      playIconWidget = this.chewieController.playIcon;
+    }                
+
     return Expanded(
       child: GestureDetector(
         onTap: () {
@@ -182,16 +194,7 @@ class _MaterialControlsState extends State<MaterialControls> {
               opacity: _latestValue != null && !_latestValue.isPlaying && !_dragging ? 1.0 : 0.0,
               duration: Duration(milliseconds: 300),
               child: GestureDetector(
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).dialogBackgroundColor,
-                    borderRadius: BorderRadius.circular(48.0),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.all(12.0),
-                    child: Icon(Icons.play_arrow, size: 32.0),
-                  ),
-                ),
+                child: playIconWidget,
               ),
             ),
           ),
